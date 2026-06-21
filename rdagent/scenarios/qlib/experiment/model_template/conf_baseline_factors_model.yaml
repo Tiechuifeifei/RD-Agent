@@ -1,8 +1,8 @@
 qlib_init:
-    provider_uri: "~/.qlib/qlib_data/cn_data"
-    region: cn
-market: &market csi300
-benchmark: &benchmark SH000300
+    provider_uri: "~/.qlib/qlib_data/us_data"
+    region: us
+market: &market nasdaq100
+benchmark: &benchmark ^NDX
 
 data_handler_config: &data_handler_config
     start_time: {{ train_start | default("2008-01-01", true) }}
@@ -52,11 +52,11 @@ port_analysis_config: &port_analysis_config
         account: 100000000
         benchmark: *benchmark
         exchange_kwargs:
-            limit_threshold: 0.095
+            limit_threshold: null
             deal_price: close
-            open_cost: 0.0005
-            close_cost: 0.0015
-            min_cost: 5
+            open_cost: 0.0001
+            close_cost: 0.0001
+            min_cost: 0
 task:
     model:
         class: GeneralPTNN
