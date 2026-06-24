@@ -188,3 +188,12 @@ AGENTS.md
 !rdagent/**/AGENTS.md
 
 scripts/
+
+# RD-Agent generated files
+log/
+git_ignore_folder/
+*.pkl
+*.h5
+*.parquet
+.env
+__session__/

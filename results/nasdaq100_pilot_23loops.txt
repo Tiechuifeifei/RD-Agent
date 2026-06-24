@@ -1,0 +1,79 @@
+=== Current IC ===
+IC of Current Result is 0.009221
+IC of Current Result is 0.008895
+IC of Current Result is 0.015202
+IC of Current Result is 0.009158
+IC of Current Result is 0.004831
+IC of Current Result is 0.012753
+IC of Current Result is 0.016959
+IC of Current Result is 0.016319
+IC of Current Result is 0.011133
+IC of Current Result is 0.009180
+IC of Current Result is 0.000800
+IC of Current Result is 0.012470
+IC of Current Result is 0.020110
+IC of Current Result is 0.009188
+IC of Current Result is 0.004035
+IC of Current Result is 0.017532
+IC of Current Result is -0.001463
+IC of Current Result is 0.000542
+IC of Current Result is -0.001208
+IC of Current Result is 0.006240
+IC of Current Result is 0.011716
+IC of Current Result is 0.000746
+IC of Current Result is 0.013542
+=== Current ARR ===
+annualized_return of Current Result is -0.093068
+annualized_return of Current Result is -0.095520
+annualized_return of Current Result is -0.086241
+annualized_return of Current Result is -0.055427
+annualized_return of Current Result is -0.024870
+annualized_return of Current Result is -0.158820
+annualized_return of Current Result is -0.050202
+annualized_return of Current Result is -0.106184
+annualized_return of Current Result is -0.141441
+annualized_return of Current Result is 0.088247
+annualized_return of Current Result is -0.189178
+annualized_return of Current Result is -0.220881
+annualized_return of Current Result is 0.033359
+annualized_return of Current Result is -0.102930
+annualized_return of Current Result is -0.116556
+annualized_return of Current Result is -0.072616
+annualized_return of Current Result is -0.181866
+annualized_return of Current Result is -0.081441
+annualized_return of Current Result is -0.023407
+annualized_return of Current Result is -0.158876
+annualized_return of Current Result is -0.021444
+annualized_return of Current Result is -0.032900
+annualized_return of Current Result is -0.094934
+=== Current MDD ===
+max_drawdown of Current Result is -0.153032
+max_drawdown of Current Result is -0.180206
+max_drawdown of Current Result is -0.160216
+max_drawdown of Current Result is -0.106243
+max_drawdown of Current Result is -0.127173
+max_drawdown of Current Result is -0.198492
+max_drawdown of Current Result is -0.118414
+max_drawdown of Current Result is -0.161689
+max_drawdown of Current Result is -0.176764
+max_drawdown of Current Result is -0.072807
+max_drawdown of Current Result is -0.181525
+max_drawdown of Current Result is -0.266298
+max_drawdown of Current Result is -0.107206
+max_drawdown of Current Result is -0.156756
+max_drawdown of Current Result is -0.129610
+max_drawdown of Current Result is -0.109716
+max_drawdown of Current Result is -0.179472
+max_drawdown of Current Result is -0.186237
+max_drawdown of Current Result is -0.104846
+max_drawdown of Current Result is -0.246900
+max_drawdown of Current Result is -0.128626
+max_drawdown of Current Result is -0.155263
+max_drawdown of Current Result is -0.141654
+=== SOTA values ===
+of SOTA Result is 0.031068
+of SOTA Result is 0.041045
+of SOTA Result is -0.142199
+of SOTA Result is 0.009180
+of SOTA Result is 0.088247
+of SOTA Result is -0.072807
