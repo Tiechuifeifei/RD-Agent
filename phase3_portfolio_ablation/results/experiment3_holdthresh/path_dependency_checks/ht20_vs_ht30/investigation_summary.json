@@ -1,0 +1,14 @@
+{
+  "pair": "ht20_vs_ht30",
+  "ht_lo": 20,
+  "ht_hi": 30,
+  "arr_lo_pct": -4.242,
+  "arr_hi_pct": -15.5833,
+  "gap_pp": -11.3413,
+  "top20_mean_overlap": 5.15,
+  "top20_min_overlap": 3,
+  "top20_max_overlap": 6,
+  "median_overlap_all_days": 5,
+  "path_dependency_likely": true,
+  "interpretation": "Low EOD overlap on high-diff days suggests path-dependency divergence"
+}

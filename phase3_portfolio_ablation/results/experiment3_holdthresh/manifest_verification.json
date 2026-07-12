@@ -1,0 +1,79 @@
+{
+  "all_match": true,
+  "pred_sha256": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+  "n_configs": 12,
+  "checks": [
+    {
+      "relative": "inputs/baseline_pred.pkl",
+      "expected": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+      "actual": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+      "match": true
+    },
+    {
+      "relative": "configs/baseline.yaml",
+      "expected": "a6661db98addd4f8a653b44ce77146cfcf6232f302f22fc1ee2c6e34ae2eca29",
+      "actual": "a6661db98addd4f8a653b44ce77146cfcf6232f302f22fc1ee2c6e34ae2eca29",
+      "match": true
+    },
+    {
+      "relative": "configs/holdthresh2.yaml",
+      "expected": "5b130f0cd97db918920ad09cd02729ba27c2d38ad717ebc7b7dd4cc5c5ea7ea7",
+      "actual": "5b130f0cd97db918920ad09cd02729ba27c2d38ad717ebc7b7dd4cc5c5ea7ea7",
+      "match": true
+    },
+    {
+      "relative": "configs/holdthresh3.yaml",
+      "expected": "74c2517dcc0c3c63e96cad832f29606ee7ea8cb7906f94f1c824d6b0b498a417",
+      "actual": "74c2517dcc0c3c63e96cad832f29606ee7ea8cb7906f94f1c824d6b0b498a417",
+      "match": true
+    },
+    {
+      "relative": "configs/holdthresh4.yaml",
+      "expected": "067d935d61fbe1edba33c6b100e10b828fa00923435985fd82cca84cf38a6506",
+      "actual": "067d935d61fbe1edba33c6b100e10b828fa00923435985fd82cca84cf38a6506",
+      "match": true
+    },
+    {
+      "relative": "configs/holdthresh5.yaml",
+      "expected": "1d1fe5189508618c705e46885b402dbdda5fa198b5bd79d341c9779f57f41525",
+      "actual": "1d1fe5189508618c705e46885b402dbdda5fa198b5bd79d341c9779f57f41525",
+      "match": true
+    },
+    {
+      "relative": "configs/holdthresh6.yaml",
+      "expected": "ce0e01bf3cc71b096c3f6c5364bf5694c722cbabba891100f9063dba64a11e2c",
+      "actual": "ce0e01bf3cc71b096c3f6c5364bf5694c722cbabba891100f9063dba64a11e2c",
+      "match": true
+    },
+    {
+      "relative": "configs/holdthresh8.yaml",
+      "expected": "e34e29d6d5e53559f89a23007815a2a4f5c25919186a42f673c3a095dcf978ba",
+      "actual": "e34e29d6d5e53559f89a23007815a2a4f5c25919186a42f673c3a095dcf978ba",
+      "match": true
+    },
+    {
+      "relative": "configs/holdthresh10.yaml",
+      "expected": "b24a904be725493df8302d2a8139aa2365ffb817feee7c93f3f30602dda8aa84",
+      "actual": "b24a904be725493df8302d2a8139aa2365ffb817feee7c93f3f30602dda8aa84",
+      "match": true
+    },
+    {
+      "relative": "configs/holdthresh15.yaml",
+      "expected": "20f14bb23fc7edbe2b87d01064444e884d79ad3d54ce4ae1eabcad8d4bf01003",
+      "actual": "20f14bb23fc7edbe2b87d01064444e884d79ad3d54ce4ae1eabcad8d4bf01003",
+      "match": true
+    },
+    {
+      "relative": "configs/holdthresh20.yaml",
+      "expected": "419be4098b38dbb01636afca02fb04d76acf90dd3932b1a91ac5444c07d771a6",
+      "actual": "419be4098b38dbb01636afca02fb04d76acf90dd3932b1a91ac5444c07d771a6",
+      "match": true
+    },
+    {
+      "relative": "configs/holdthresh30.yaml",
+      "expected": "4aeb4c05950a9e7baa93e043044591ee7e26b36e494b3eb58a3b5a753eff500e",
+      "actual": "4aeb4c05950a9e7baa93e043044591ee7e26b36e494b3eb58a3b5a753eff500e",
+      "match": true
+    }
+  ]
+}
