@@ -1,0 +1,31 @@
+{
+  "pred_path": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/inputs/baseline_pred.pkl",
+  "hashes": {
+    "md5": "264d043ee0eded6c1cca46d5e89d223a",
+    "sha256": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+    "size_bytes": 6127487
+  },
+  "manifest_sha256": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+  "topk_experiments": {
+    "design": "run_portfolio_ablation.py --pred defaults to inputs/baseline_pred.pkl for all variants",
+    "configs": {
+      "topk10": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/configs/topk10.yaml",
+      "baseline_topk20": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/configs/baseline.yaml",
+      "topk50": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/configs/topk50.yaml",
+      "topk100": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/configs/topk100.yaml"
+    },
+    "note": "Only baseline summary.json exists on disk; topk10/50/100 runs failed at --verify-hash. All variants share the same --pred input by script design."
+  },
+  "pred_index_names": [
+    "datetime",
+    "instrument"
+  ],
+  "pred_columns": [
+    "score"
+  ],
+  "pred_date_range": [
+    "2020-01-02 00:00:00",
+    "2023-12-29 00:00:00"
+  ],
+  "manifest_match": true
+}

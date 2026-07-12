@@ -1,0 +1,34 @@
+qlib_init:
+  provider_uri: /Users/yufei/wrds_project/staging/qlib_data
+  region: us
+executor:
+  class: SimulatorExecutor
+  module_path: qlib.backtest.executor
+  kwargs:
+    time_per_step: day
+    generate_portfolio_metrics: true
+port_analysis_config:
+  strategy:
+    class: TopkDropoutStrategy
+    module_path: qlib.contrib.strategy
+    kwargs:
+      risk_degree: 0.95
+      hold_thresh: 1
+      method_sell: bottom
+      method_buy: top
+      only_tradable: false
+      forbid_all_trade_at_limit: true
+      signal: <PRED>
+      topk: 20
+      n_drop: 4
+  backtest:
+    start_time: 2020-01-01
+    end_time: 2023-12-31
+    account: 100000000
+    benchmark: P10104
+    exchange_kwargs:
+      limit_threshold: null
+      deal_price: close
+      open_cost: 0.0001
+      close_cost: 0.0001
+      min_cost: 0

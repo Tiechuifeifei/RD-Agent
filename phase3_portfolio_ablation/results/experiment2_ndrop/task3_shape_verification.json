@@ -1,0 +1,100 @@
+{
+  "n_points": 11,
+  "ndrop_values": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    15,
+    20
+  ],
+  "arr_pct_by_ndrop": {
+    "1": -11.785079132300272,
+    "2": -11.13093366471705,
+    "3": -13.301976333878423,
+    "4": -5.67163918225293,
+    "5": -12.560689445967563,
+    "6": -8.029065479061833,
+    "7": -10.26586936007153,
+    "8": -6.890230283995313,
+    "10": -10.923464754065261,
+    "15": -8.907109710844214,
+    "20": -12.099818488376885
+  },
+  "segment_directions": {
+    "1->2": "up",
+    "2->3": "down",
+    "3->4": "up",
+    "4->5": "down",
+    "5->6": "up",
+    "6->7": "down",
+    "7->8": "up",
+    "8->10": "down",
+    "10->15": "up",
+    "15->20": "down"
+  },
+  "direction_sequence": "\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193",
+  "original_5pt_direction_sequence": "\u2191\u2193\u2191\u2193",
+  "global_peak": {
+    "n_drop": 4,
+    "arr_pct": -5.6716
+  },
+  "global_valley": {
+    "n_drop": 3,
+    "arr_pct": -13.302
+  },
+  "local_peaks": [
+    {
+      "n_drop": 2,
+      "arr_pct": -11.1309
+    },
+    {
+      "n_drop": 4,
+      "arr_pct": -5.6716
+    },
+    {
+      "n_drop": 6,
+      "arr_pct": -8.0291
+    },
+    {
+      "n_drop": 8,
+      "arr_pct": -6.8902
+    },
+    {
+      "n_drop": 15,
+      "arr_pct": -8.9071
+    }
+  ],
+  "local_valleys": [
+    {
+      "n_drop": 3,
+      "arr_pct": -13.302
+    },
+    {
+      "n_drop": 5,
+      "arr_pct": -12.5607
+    },
+    {
+      "n_drop": 7,
+      "arr_pct": -10.2659
+    },
+    {
+      "n_drop": 10,
+      "arr_pct": -10.9235
+    }
+  ],
+  "original_peak_ndrop10_still_global_max": false,
+  "original_valley_ndrop5_still_global_min": false,
+  "verdict": "still_irregular_sawtooth; global peak n_drop=4, global valley n_drop=3; densification did not produce a smooth inverted-U",
+  "original_5pt": {
+    "peak_ndrop": 10,
+    "valley_ndrop": 5,
+    "peak_arr_pct": -10.9235,
+    "valley_arr_pct": -12.5607
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "pred_sha256": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+  "path_dependency_test": {
+    "full_sample_nd4_minus_nd3_pp": 7.6303,
+    "q1_nd4_minus_nd3_pp": 53.1737,
+    "recovery_nd4_minus_nd3_pp": 3.5054,
+    "post_covid_nd4_minus_nd3_pp": -4.2411,
+    "q1_gap_smaller_than_full": false,
+    "ratio_q1_to_full": 6.9688,
+    "interpretation": "Q1 (62d) gap still very large (53pp) and even larger than full-sample 7.6pp in absolute terms; however 2022-23 sub-period shows nd3>nd4 (reversed sign). Full-sample nd4 advantage is NOT monotonic time accumulation \u2014 it is regime-specific path divergence. Sawtooth flips decrease in shorter windows (9\u21925\u21924) but do not vanish."
+  },
+  "regime_dependent_optima": {
+    "2020Q1_COVID": {
+      "best_ndrop": 4,
+      "best_arr_pct": -80.7036
+    },
+    "2020Q2_2021_recovery": {
+      "best_ndrop": 1,
+      "best_arr_pct": 22.8164
+    },
+    "2022_2023_post_covid": {
+      "best_ndrop": 7,
+      "best_arr_pct": -6.9803
+    },
+    "full_sample_2020_2023": {
+      "best_ndrop": 4,
+      "best_arr_pct": -5.6716
+    }
+  },
+  "sawtooth_by_period": {
+    "2020Q1_COVID": {
+      "direction_sequence": "\u2191\u2193\u2191\u2193\u2193\u2191\u2191\u2193\u2193\u2193",
+      "n_direction_flips": 5,
+      "still_sawtooth": true
+    },
+    "2020Q2_2021_recovery": {
+      "direction_sequence": "\u2193\u2193\u2191\u2191\u2193\u2193\u2193\u2191\u2191\u2193",
+      "n_direction_flips": 4,
+      "still_sawtooth": true
+    },
+    "2022_2023_post_covid": {
+      "direction_sequence": "\u2191\u2191\u2193\u2191\u2193\u2191\u2193\u2193\u2193\u2191",
+      "n_direction_flips": 6,
+      "still_sawtooth": true
+    },
+    "full_sample_2020_2023": {
+      "direction_sequence": "\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193",
+      "n_direction_flips": 9,
+      "still_sawtooth": true
+    }
+  },
+  "period_analyses": {
+    "2020Q1_COVID": {
+      "period": "2020Q1_COVID",
+      "n_days": 62,
+      "arr_pct_by_ndrop": {
+        "1": -136.848,
+        "2": -108.7176,
+        "3": -133.8774,
+        "4": -80.7036,
+        "5": -128.5867,
+        "6": -128.8316,
+        "7": -125.2137,
+        "8": -103.3982,
+        "10": -105.0371,
+        "15": -116.4197,
+        "20": -149.1117
+      },
+      "direction_sequence": "\u2191\u2193\u2191\u2193\u2193\u2191\u2191\u2193\u2193\u2193",
+      "n_direction_flips": 5,
+      "best_ndrop": 4,
+      "best_arr_pct": -80.7036,
+      "worst_ndrop": 20,
+      "worst_arr_pct": -149.1117,
+      "nd4_minus_nd3_pp": 53.1737
+    },
+    "2020Q2_2021_recovery": {
+      "period": "2020Q2_2021_recovery",
+      "n_days": 443,
+      "arr_pct_by_ndrop": {
+        "1": 22.8164,
+        "2": 14.1869,
+        "3": 6.3802,
+        "4": 9.8856,
+        "5": 15.8386,
+        "6": 11.3449,
+        "7": 10.1196,
+        "8": 7.8715,
+        "10": 10.6488,
+        "15": 10.694,
+        "20": 9.8361
+      },
+      "direction_sequence": "\u2193\u2193\u2191\u2191\u2193\u2193\u2193\u2191\u2191\u2193",
+      "n_direction_flips": 4,
+      "best_ndrop": 1,
+      "best_arr_pct": 22.8164,
+      "worst_ndrop": 3,
+      "worst_arr_pct": 6.3802,
+      "nd4_minus_nd3_pp": 3.5054
+    },
+    "2022_2023_post_covid": {
+      "period": "2022_2023_post_covid",
+      "n_days": 501,
+      "arr_pct_by_ndrop": {
+        "1": -18.2394,
+        "2": -11.4483,
+        "3": -8.5968,
+        "4": -12.838,
+        "5": -11.3834,
+        "6": -13.2818,
+        "7": -6.9803,
+        "8": -9.9342,
+        "10": -12.7253,
+        "15": -13.6859,
+        "20": -12.393
+      },
+      "direction_sequence": "\u2191\u2191\u2193\u2191\u2193\u2191\u2193\u2193\u2193\u2191",
+      "n_direction_flips": 6,
+      "best_ndrop": 7,
+      "best_arr_pct": -6.9803,
+      "worst_ndrop": 1,
+      "worst_arr_pct": -18.2394,
+      "nd4_minus_nd3_pp": -4.2411
+    },
+    "full_sample_2020_2023": {
+      "period": "full_sample_2020_2023",
+      "n_days": 1006,
+      "arr_pct_by_ndrop": {
+        "1": -11.7851,
+        "2": -11.1309,
+        "3": -13.302,
+        "4": -5.6716,
+        "5": -12.5607,
+        "6": -8.0291,
+        "7": -10.2659,
+        "8": -6.8902,
+        "10": -10.9235,
+        "15": -8.9071,
+        "20": -12.0998
+      },
+      "direction_sequence": "\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193",
+      "n_direction_flips": 9,
+      "best_ndrop": 4,
+      "best_arr_pct": -5.6716,
+      "worst_ndrop": 3,
+      "worst_arr_pct": -13.302,
+      "nd4_minus_nd3_pp": 7.6303
+    }
+  }
+}

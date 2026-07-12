@@ -1,0 +1,35 @@
+[
+  {
+    "period":"2020Q1_COVID",
+    "start":"2020-01-01",
+    "end":"2020-03-31",
+    "mean_ic":-0.0067234677,
+    "mean_rank_ic":-0.0078158056,
+    "icir":-0.0593422297,
+    "rank_icir":-0.1067276891,
+    "n_trading_days":62,
+    "n_observations":31308
+  },
+  {
+    "period":"2020Q2_2021_recovery",
+    "start":"2020-04-01",
+    "end":"2021-12-31",
+    "mean_ic":0.0025942779,
+    "mean_rank_ic":0.0012459499,
+    "icir":0.0322737762,
+    "rank_icir":0.0168417805,
+    "n_trading_days":443,
+    "n_observations":223706
+  },
+  {
+    "period":"2022_2023_post_covid",
+    "start":"2022-01-01",
+    "end":"2023-12-31",
+    "mean_ic":0.0077320983,
+    "mean_rank_ic":0.0045766131,
+    "icir":0.1093152667,
+    "rank_icir":0.0695040545,
+    "n_trading_days":501,
+    "n_observations":252179
+  }
+]

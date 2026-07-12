@@ -1,0 +1,47 @@
+{
+  "pred_hash": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+  "config_hash": "46fb569c565a6f1175cfccdc7981fb9a796d192e987a1eb9a7a3bd757bb7f757",
+  "pred_path": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/inputs/baseline_pred.pkl",
+  "config_path": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/configs/ndrop3.yaml",
+  "pred_date_range": {
+    "start": "2020-01-02",
+    "end": "2023-12-29"
+  },
+  "backtest_window": {
+    "start": "2020-01-01",
+    "end": "2023-12-31"
+  },
+  "executor": {
+    "class": "SimulatorExecutor",
+    "module_path": "qlib.backtest.executor",
+    "kwargs": {
+      "time_per_step": "day",
+      "generate_portfolio_metrics": true
+    }
+  },
+  "strategy": {
+    "class": "TopkDropoutStrategy",
+    "module_path": "qlib.contrib.strategy",
+    "kwargs": {
+      "risk_degree": 0.95,
+      "hold_thresh": 1,
+      "method_sell": "bottom",
+      "method_buy": "top",
+      "only_tradable": false,
+      "forbid_all_trade_at_limit": true,
+      "signal": "<PRED>",
+      "topk": 20,
+      "n_drop": 3
+    }
+  },
+  "metrics": {
+    "annualized_return_without_cost": -0.13237569674365643,
+    "annualized_return_with_cost": -0.13301976333878424,
+    "information_ratio_with_cost": -0.46212271369853836,
+    "maximum_drawdown_with_cost": -0.7028690231342065,
+    "mean_daily_cost": 2.706162164402594e-06,
+    "annualized_cost_drag": 0.0006440665951278068,
+    "average_number_of_positions": 22.70178926441352,
+    "mean_daily_turnover": 0.027061621644025945
+  }
+}

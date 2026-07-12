@@ -1,0 +1,41 @@
+{
+  "manifest_path": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/inputs/input_hashes.txt",
+  "all_match": true,
+  "checks": [
+    {
+      "path": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/inputs/baseline_pred.pkl",
+      "relative": "inputs/baseline_pred.pkl",
+      "expected_sha256": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+      "actual_sha256": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+      "match": true
+    },
+    {
+      "path": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/configs/baseline.yaml",
+      "relative": "configs/baseline.yaml",
+      "expected_sha256": "a6661db98addd4f8a653b44ce77146cfcf6232f302f22fc1ee2c6e34ae2eca29",
+      "actual_sha256": "a6661db98addd4f8a653b44ce77146cfcf6232f302f22fc1ee2c6e34ae2eca29",
+      "match": true
+    },
+    {
+      "path": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/configs/topk10.yaml",
+      "relative": "configs/topk10.yaml",
+      "expected_sha256": "0624f95e8a10ea6b5f216600458dc498452cf3c8ae7abc05f3c63e1e9e0a55e2",
+      "actual_sha256": "0624f95e8a10ea6b5f216600458dc498452cf3c8ae7abc05f3c63e1e9e0a55e2",
+      "match": true
+    },
+    {
+      "path": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/configs/topk50.yaml",
+      "relative": "configs/topk50.yaml",
+      "expected_sha256": "49b8ca016e27483a92774188f75272e9b2d9b2f97d5041eb611b58d21dfb42e5",
+      "actual_sha256": "49b8ca016e27483a92774188f75272e9b2d9b2f97d5041eb611b58d21dfb42e5",
+      "match": true
+    },
+    {
+      "path": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/configs/topk100.yaml",
+      "relative": "configs/topk100.yaml",
+      "expected_sha256": "a419bb3ebf92e72a827d7c5f6c852f67be76f270e26352b1489e67ce2b58d06f",
+      "actual_sha256": "a419bb3ebf92e72a827d7c5f6c852f67be76f270e26352b1489e67ce2b58d06f",
+      "match": true
+    }
+  ]
+}

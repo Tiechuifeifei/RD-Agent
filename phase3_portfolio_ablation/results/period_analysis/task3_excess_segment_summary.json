@@ -1,0 +1,23 @@
+[
+  {
+    "segment":"rank_1_20",
+    "raw_annualized_return":0.1848978022,
+    "excess_annualized_return":-0.0304928966,
+    "excess_daily_std":0.0211280962,
+    "n_days":1006
+  },
+  {
+    "segment":"rank_21_50",
+    "raw_annualized_return":0.1329448362,
+    "excess_annualized_return":-0.082445876,
+    "excess_daily_std":0.0186010369,
+    "n_days":1006
+  },
+  {
+    "segment":"rank_51_100",
+    "raw_annualized_return":0.1206694764,
+    "excess_annualized_return":-0.0947212177,
+    "excess_daily_std":0.0176762678,
+    "n_days":1006
+  }
+]

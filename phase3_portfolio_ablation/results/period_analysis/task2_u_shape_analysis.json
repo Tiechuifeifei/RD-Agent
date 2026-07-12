@@ -1,0 +1,55 @@
+{
+  "pred_path": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/inputs/baseline_pred.pkl",
+  "pred_hash": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+  "period_u_shape_checks": [
+    {
+      "period": "2020Q1_COVID",
+      "arr_by_topk": {
+        "10": -1.439979783313894,
+        "20": -1.0871761876237045,
+        "50": -1.0106059571760464,
+        "100": -1.014929163867884
+      },
+      "u_shape_50_worst_between_20_and_100": false,
+      "best_topk": 50,
+      "worst_topk": 10
+    },
+    {
+      "period": "2020Q2_2021_recovery",
+      "arr_by_topk": {
+        "10": 0.10862735109175752,
+        "20": 0.1418688613243524,
+        "50": 0.07543707548832272,
+        "100": 0.06013392531923346
+      },
+      "u_shape_50_worst_between_20_and_100": false,
+      "best_topk": 20,
+      "worst_topk": 100
+    },
+    {
+      "period": "2022_2023_post_covid",
+      "arr_by_topk": {
+        "10": -0.20349523797482352,
+        "20": -0.11448258291601833,
+        "50": -0.08242068900293216,
+        "100": -0.1184389864780001
+      },
+      "u_shape_50_worst_between_20_and_100": false,
+      "best_topk": 50,
+      "worst_topk": 10
+    }
+  ],
+  "full_test_u_shape_from_prior_run": {
+    "topk20": -0.11130933664717045,
+    "topk50": -0.14739281261156706,
+    "topk100": -0.11893363156968696,
+    "u_shape_50_worst": true
+  },
+  "excluding_2020Q1_mean_arr_by_topk": {
+    "10": -0.047433943441533004,
+    "20": 0.01369313920416703,
+    "50": -0.003491806757304719,
+    "100": -0.02915253057938332
+  },
+  "excluding_2020Q1_u_shape_50_worst": false
+}

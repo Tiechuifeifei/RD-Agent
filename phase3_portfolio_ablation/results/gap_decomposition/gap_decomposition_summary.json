@@ -1,0 +1,151 @@
+{
+  "reference": {
+    "task3_static_rank1_20_excess_label_arr": -0.030492896645752388,
+    "portfolio_topk20_excess_arr_with_cost": -0.1113093366471705,
+    "total_gap_pp": -0.08081643999941812,
+    "portfolio_cost_drag_arr": 0.0006571229346593183
+  },
+  "level_metrics": {
+    "L0_static_top20_today_excess_label": {
+      "mean_daily": -0.00010199317727426075,
+      "annualized_return": -0.024274376191274094,
+      "information_ratio": -0.075509975173968,
+      "max_drawdown": -0.6108653038740158,
+      "n_days": 990
+    },
+    "L1_static_top20_lag1_excess_label": {
+      "mean_daily": -0.00045164827750835665,
+      "annualized_return": -0.10749229004698888,
+      "information_ratio": -0.35449672010517874,
+      "max_drawdown": -0.7260477331123857,
+      "n_days": 989
+    },
+    "L2_held_ew_excess_label": {
+      "mean_daily": -0.00026009719503952765,
+      "annualized_return": -0.061903132419407564,
+      "information_ratio": -0.19111928072642453,
+      "max_drawdown": -0.7410650277152107,
+      "n_days": 994
+    },
+    "L3_held_weighted_excess_label": {
+      "mean_daily": -0.0003428953419162573,
+      "annualized_return": -0.08160909137606925,
+      "information_ratio": -0.26100307171777914,
+      "max_drawdown": -0.7884989452438014,
+      "n_days": 994
+    },
+    "L4_static_top20_today_excess_cc": {
+      "mean_daily": NaN,
+      "annualized_return": NaN,
+      "information_ratio": NaN,
+      "max_drawdown": NaN,
+      "n_days": 0
+    },
+    "L5_static_top20_lag1_excess_cc": {
+      "mean_daily": NaN,
+      "annualized_return": NaN,
+      "information_ratio": NaN,
+      "max_drawdown": NaN,
+      "n_days": 0
+    },
+    "L6_held_ew_excess_cc": {
+      "mean_daily": -0.0003026104223669404,
+      "annualized_return": -0.07202128052333182,
+      "information_ratio": -0.16298909871734815,
+      "max_drawdown": -0.7899931464714026,
+      "n_days": 1005
+    },
+    "L7_ideal_daily_ew_rebal_top20_excess_cc": {
+      "mean_daily": -0.0006958766600239891,
+      "annualized_return": -0.16561864508570942,
+      "information_ratio": -0.3327771861917039,
+      "max_drawdown": -1.3603404825710683,
+      "n_days": 1005
+    },
+    "L8_portfolio_excess_without_cost": {
+      "mean_daily": -0.00044717283819065867,
+      "annualized_return": -0.10642713548937677,
+      "information_ratio": -0.3543131755649788,
+      "max_drawdown": -0.8098446594917956,
+      "n_days": 1005
+    },
+    "L9_portfolio_excess_with_cost": {
+      "mean_daily": -0.00044993385892452137,
+      "annualized_return": -0.10708425842403609,
+      "information_ratio": -0.35650281504808656,
+      "max_drawdown": -0.8098446594917958,
+      "n_days": 1005
+    }
+  },
+  "incremental_gaps_pp": {
+    "H2_signal_lag_label": {
+      "from": "L0_static_top20_today_excess_label",
+      "to": "L1_static_top20_lag1_excess_label",
+      "annualized_gap_pp": -0.08321791385571478,
+      "hypothesis": "signal shift=1 vs same-day score (timing/label alignment partial)"
+    },
+    "H1_dynamic_holdings_label": {
+      "from": "L1_static_top20_lag1_excess_label",
+      "to": "L2_held_ew_excess_label",
+      "annualized_gap_pp": 0.04558915762758131,
+      "hypothesis": "n_drop dynamic holdings vs static lagged top-20 (label space)"
+    },
+    "H3_weighting_label": {
+      "from": "L2_held_ew_excess_label",
+      "to": "L3_held_weighted_excess_label",
+      "annualized_gap_pp": -0.01970595895666169,
+      "hypothesis": "equal-weight vs actual position weights (label space)"
+    },
+    "H2_label_vs_close_to_close_static": {
+      "from": "L0_static_top20_today_excess_label",
+      "to": "L4_static_top20_today_excess_cc",
+      "annualized_gap_pp": NaN,
+      "hypothesis": "label formula vs close-to-close deal_price return (static top20)"
+    },
+    "H2_label_vs_close_to_close_held": {
+      "from": "L2_held_ew_excess_label",
+      "to": "L6_held_ew_excess_cc",
+      "annualized_gap_pp": -0.010118148103924252,
+      "hypothesis": "label formula vs close-to-close on actual holdings"
+    },
+    "H1+H3_ideal_rebal_vs_portfolio": {
+      "from": "L7_ideal_daily_ew_rebal_top20_excess_cc",
+      "to": "L8_portfolio_excess_without_cost",
+      "annualized_gap_pp": 0.05919150959633265,
+      "hypothesis": "daily EW rebal top20 (cc) vs actual strategy w/o cost"
+    },
+    "cost_only": {
+      "from": "L8_portfolio_excess_without_cost",
+      "to": "L9_portfolio_excess_with_cost",
+      "annualized_gap_pp": -0.0006571229346593183,
+      "hypothesis": "transaction cost"
+    },
+    "TOTAL_label_ideal_to_portfolio": {
+      "from": "L0_static_top20_today_excess_label",
+      "to": "L9_portfolio_excess_with_cost",
+      "annualized_gap_pp": -0.08280988223276199,
+      "hypothesis": "full gap to explain"
+    }
+  },
+  "overlap_stats": {
+    "mean_overlap_same_day_top20": 0.06283582089552239,
+    "mean_overlap_lag1_top20": 0.07741293532338309,
+    "mean_n_outside_lag1_top20": 20.16716417910448,
+    "mean_held_rank": 260.61595205089105,
+    "median_max_held_rank": 494.0,
+    "pct_days_max_held_rank_gt_20": 1.0,
+    "mean_cash_weight": -2.6512788647764932e-17,
+    "median_cash_weight": 0.0,
+    "mean_weight_l1_dev_from_ew": 0.34635639486681286
+  },
+  "inside_vs_outside_lag_top20": {
+    "inside_lag_top20_ew_excess_label_ann": -0.1254456308309746,
+    "outside_lag_top20_ew_excess_label_ann": -0.06646381503107035,
+    "mean_outside_fraction_of_portfolio": 1.0083582089552239
+  },
+  "label_timing_diagnostics": {
+    "corr_label_with_close_to_close_same_day": 0.2018152308970772,
+    "corr_label_with_forward_return_ref_close_m1_over_close": NaN,
+    "note": "label=Ref($close,-2)/Ref($close,-1)-1; deal_price=close uses close-to-close"
+  }
+}

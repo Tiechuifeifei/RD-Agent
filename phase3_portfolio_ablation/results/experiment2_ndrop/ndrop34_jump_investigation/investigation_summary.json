@@ -1,0 +1,79 @@
+{
+  "pred_sha256": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+  "full_sample": {
+    "nd3_arr_pct": -13.302,
+    "nd4_arr_pct": -5.6716,
+    "nd4_minus_nd3_pp": 7.6303
+  },
+  "task1_top5_diff_days": [
+    {
+      "datetime": "2020-11-09",
+      "excess_return_nd3": 0.05390145240046017,
+      "excess_return_nd4": 0.10767383870584199,
+      "excess_diff_nd4_minus_nd3": 0.05377238630538182
+    },
+    {
+      "datetime": "2020-03-17",
+      "excess_return_nd3": -0.071509865037232,
+      "excess_return_nd4": -0.03491361488761629,
+      "excess_diff_nd4_minus_nd3": 0.03659625014961571
+    },
+    {
+      "datetime": "2021-01-28",
+      "excess_return_nd3": 0.041931785747997705,
+      "excess_return_nd4": 0.009200394116652732,
+      "excess_diff_nd4_minus_nd3": -0.032731391631344975
+    },
+    {
+      "datetime": "2020-03-20",
+      "excess_return_nd3": -0.05024901984831952,
+      "excess_return_nd4": -0.019011861488474193,
+      "excess_diff_nd4_minus_nd3": 0.031237158359845325
+    },
+    {
+      "datetime": "2020-08-10",
+      "excess_return_nd3": 0.019884855435006517,
+      "excess_return_nd4": 0.048072277012463,
+      "excess_diff_nd4_minus_nd3": 0.028187421577456483
+    }
+  ],
+  "task1_concentration": {
+    "n_days_for_50pct_abs_diff_mass": 205,
+    "n_days_for_80pct_abs_diff_mass": 463,
+    "total_backtest_days": 1006
+  },
+  "task3_extreme_stock_count": 40,
+  "task4_trim_comparison": {
+    "none": {
+      "nd4_minus_nd3_pp": 7.630337151625492,
+      "direction_sequence": "\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193",
+      "n_excluded_days": 0
+    },
+    "top5_abs_diff_days": {
+      "nd4_minus_nd3_pp": 4.885162582641886,
+      "direction_sequence": "\u2193\u2193\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193",
+      "n_excluded_days": 5
+    },
+    "top10_abs_diff_days": {
+      "nd4_minus_nd3_pp": 7.448367057486407,
+      "direction_sequence": "\u2193\u2193\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193",
+      "n_excluded_days": 10
+    },
+    "top20_abs_diff_days": {
+      "nd4_minus_nd3_pp": 5.792880245627054,
+      "direction_sequence": "\u2193\u2193\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193",
+      "n_excluded_days": 20
+    },
+    "days_with_extreme_diff_stock_gt10pct": {
+      "nd4_minus_nd3_pp": 6.668545254383349,
+      "direction_sequence": "\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193",
+      "n_excluded_days": 5
+    },
+    "baseline_full_sample": {
+      "nd4_minus_nd3_pp": 7.630337151625492,
+      "direction_sequence": "\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193\u2191\u2193",
+      "n_excluded_days": 0
+    }
+  },
+  "verdict": "LIKELY_SYSTEMATIC: nd4-nd3 gap remains 7.45pp after excluding top10 diff days (was 7.63pp); not dominated by a handful of days alone."
+}

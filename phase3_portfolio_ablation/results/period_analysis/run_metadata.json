@@ -1,0 +1,7 @@
+{
+  "pred_path": "/Users/yufei/RD-Agent/phase3_portfolio_ablation/inputs/baseline_pred.pkl",
+  "pred_hash": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+  "pred_md5": "264d043ee0eded6c1cca46d5e89d223a",
+  "label_source": "dataset.prepare(test, label, DK_R) \u2014 same as SignalRecord",
+  "benchmark": "P10104"
+}

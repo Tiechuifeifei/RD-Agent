@@ -1,0 +1,13 @@
+{
+  "extreme_instruments_n": 4,
+  "extreme_instruments": [
+    "P12872",
+    "P25232",
+    "P79145",
+    "P89002"
+  ],
+  "rank21_50_ann_all": 0.13328386843204498,
+  "rank21_50_ann_trim_extreme": 0.13503523170948029,
+  "rank1_20_ann": 0.1845305860042572,
+  "still_below_rank1_20_after_trim": true
+}

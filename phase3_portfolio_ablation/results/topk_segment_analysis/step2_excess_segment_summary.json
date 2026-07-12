@@ -1,0 +1,28 @@
+{
+  "benchmark": "P10104",
+  "benchmark_annualized_raw_return": 0.21539069430728466,
+  "monotonic_excess_decreasing": true,
+  "segments": [
+    {
+      "segment": "rank_1_20",
+      "excess_annualized_return": -0.0308601109796694,
+      "excess_daily_mean": -0.0001224607578558,
+      "excess_daily_std": 0.0211624154257137,
+      "n_days": 1006
+    },
+    {
+      "segment": "rank_21_50",
+      "excess_annualized_return": -0.08210682934678,
+      "excess_daily_mean": -0.0003258207513761,
+      "excess_daily_std": 0.018535740017067,
+      "n_days": 1006
+    },
+    {
+      "segment": "rank_51_100",
+      "excess_annualized_return": -0.0962798200534691,
+      "excess_daily_mean": -0.0003820627779899,
+      "excess_daily_std": 0.017671934688073,
+      "n_days": 1006
+    }
+  ]
+}

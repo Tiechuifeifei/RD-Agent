@@ -1,0 +1,35 @@
+{
+  "all_match": true,
+  "checks": [
+    {
+      "relative": "inputs/baseline_pred.pkl",
+      "match": true,
+      "sha256": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d"
+    },
+    {
+      "relative": "configs/ndrop1.yaml",
+      "match": true,
+      "sha256": "8221884eac2626e9aaa37d3a4bc70b468cf2b9cd0d4ded77fd9176506cb061b2"
+    },
+    {
+      "relative": "configs/baseline.yaml",
+      "match": true,
+      "sha256": "a6661db98addd4f8a653b44ce77146cfcf6232f302f22fc1ee2c6e34ae2eca29"
+    },
+    {
+      "relative": "configs/ndrop5.yaml",
+      "match": true,
+      "sha256": "749e4be051f2a7cbb41429f3732a10256a96a3daaf7e2f99803e4f252be2e3a3"
+    },
+    {
+      "relative": "configs/ndrop10.yaml",
+      "match": true,
+      "sha256": "f82349daf6431a10566d386fc12f852e4db1869c7a4f5bbf6450af444a92b9fb"
+    },
+    {
+      "relative": "configs/ndrop20.yaml",
+      "match": true,
+      "sha256": "a56fdd8243ce396a5862c25c3fd04b5ebfad26421f03da4f346f340d57ca9e1a"
+    }
+  ]
+}
