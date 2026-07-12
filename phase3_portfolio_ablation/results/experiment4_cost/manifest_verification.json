@@ -1,0 +1,48 @@
+{
+  "all_match": true,
+  "pred_sha256": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+  "checks": [
+    {
+      "relative": "inputs/baseline_pred.pkl",
+      "match": true,
+      "actual": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d",
+      "expected": "27f0658bc15ed87392ba87b963b2f639c1c1688d3dcb840f72373bd39b78941d"
+    },
+    {
+      "relative": "configs/cost0bp.yaml",
+      "match": true,
+      "actual": "15e96578bc65158d65bd7dd24fac6f3307f6d65f4918579ea443e0b7e739cbab",
+      "expected": "15e96578bc65158d65bd7dd24fac6f3307f6d65f4918579ea443e0b7e739cbab"
+    },
+    {
+      "relative": "configs/baseline.yaml",
+      "match": true,
+      "actual": "a6661db98addd4f8a653b44ce77146cfcf6232f302f22fc1ee2c6e34ae2eca29",
+      "expected": "a6661db98addd4f8a653b44ce77146cfcf6232f302f22fc1ee2c6e34ae2eca29"
+    },
+    {
+      "relative": "configs/cost5bp.yaml",
+      "match": true,
+      "actual": "d9cb0b286e8cb439ce370a480ec04592519db52b780ecceb849e80743ace397b",
+      "expected": "d9cb0b286e8cb439ce370a480ec04592519db52b780ecceb849e80743ace397b"
+    },
+    {
+      "relative": "configs/cost10bp.yaml",
+      "match": true,
+      "actual": "dfab485cd9ef7b4839d26a4ddc7dd7eab7e2fa873bc2878dbe621f69a815ea03",
+      "expected": "dfab485cd9ef7b4839d26a4ddc7dd7eab7e2fa873bc2878dbe621f69a815ea03"
+    },
+    {
+      "relative": "configs/cost20bp.yaml",
+      "match": true,
+      "actual": "3f3e009e8e8457633270810653c659a24d0be896c7d15b25696cb554118755fc",
+      "expected": "3f3e009e8e8457633270810653c659a24d0be896c7d15b25696cb554118755fc"
+    },
+    {
+      "relative": "configs/cost50bp.yaml",
+      "match": true,
+      "actual": "39a778980eba6bd963d38c637af60bd2cf8f19328599ce6ca7da43ee5c441311",
+      "expected": "39a778980eba6bd963d38c637af60bd2cf8f19328599ce6ca7da43ee5c441311"
+    }
+  ]
+}
