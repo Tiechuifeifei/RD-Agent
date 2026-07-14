@@ -1,3 +1,5 @@
+import platform
+
 import pandas as pd
 
 from rdagent.app.qlib_rd_loop.conf import ModelBasePropSetting
@@ -9,6 +11,20 @@ from rdagent.log import rdagent_logger as logger
 from rdagent.scenarios.qlib.developer.utils import process_factor_data
 from rdagent.scenarios.qlib.experiment.factor_experiment import QlibFactorExperiment
 from rdagent.scenarios.qlib.experiment.model_experiment import QlibModelExperiment
+
+
+def _macos_safe_qrun_env() -> dict[str, str]:
+    """Limit fork/thread fan-out for qlib qrun on macOS (PyTorch DataLoader + BLAS)."""
+    if platform.system() != "Darwin":
+        return {}
+    return {
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OBJC_DISABLE_INITIALIZE_FORK_SAFETY": "YES",
+    }
 
 
 class QlibModelRunner(CachedRunner[QlibModelExperiment]):
@@ -72,6 +88,8 @@ class QlibModelRunner(CachedRunner[QlibModelExperiment]):
         }
         if mbps.test_end is not None:
             env_to_use.update({"test_end": mbps.test_end})
+
+        env_to_use.update(_macos_safe_qrun_env())
 
         training_hyperparameters = exp.sub_tasks[0].training_hyperparameters
         if training_hyperparameters:

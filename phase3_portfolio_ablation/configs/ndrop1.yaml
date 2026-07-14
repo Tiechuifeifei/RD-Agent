@@ -3,7 +3,7 @@ qlib_init:
     region: us
 
 market: &market sp500
-benchmark: &benchmark P10104
+benchmark: &benchmark P84398
 
 data_handler_config: &data_handler_config
     start_time: 2008-01-01

@@ -2,7 +2,7 @@ qlib_init:
   provider_uri: /Users/yufei/wrds_project/staging/qlib_data
   region: us
 market: sp500
-benchmark: P10104
+benchmark: P84398
 data_handler_config: &id001
   start_time: 2008-01-01
   end_time: 2023-12-31
@@ -87,7 +87,7 @@ port_analysis_config: &id002
     start_time: 2020-01-01
     end_time: 2023-12-31
     account: 100000000
-    benchmark: P10104
+    benchmark: P84398
     exchange_kwargs:
       limit_threshold: null
       deal_price: close

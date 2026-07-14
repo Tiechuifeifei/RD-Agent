@@ -110,6 +110,17 @@ factor_hypothesis_specification: |-
   5. Note
     - Highlight that factors surpassing SOTA are included in the library to avoid re-implementation.
     - No matter how many factors you plan to generate, only reply with one set of hypothesis and reason. The hypothesis can include the proposal of multiple factors at the same time.
+  6. **Maintain Exploration Diversity Across Factor Families:**
+    - Previous experiments show that repeatedly generating regime-conditioned or volatility-scaled momentum variants (e.g. switching, weighting, or partitioning momentum signals by market state) has not produced consistent improvements in annualized return, even though some individual attempts succeeded.
+    - To avoid narrowing the search space around a single theme, actively rotate across distinct factor families across iterations, for example:
+      a) Value/quality-style factors (e.g. price-to-moving-average ratios, earnings-based proxies if data allows)
+      b) Liquidity/microstructure factors (e.g. bid-ask proxies, turnover patterns, illiquidity measures)
+      c) Cross-sectional structural signals (e.g. sector-relative or peer-group-relative measures)
+      d) Sparse/regularized statistical models (e.g. lasso, elastic net on diverse feature sets)
+      e) Representation learning (e.g. autoencoders, PCA on non-momentum feature sets)
+      f) Event/anomaly-driven signals (e.g. earnings surprise proxies, volume spikes unrelated to momentum)
+    - If the last 2-3 iterations have all involved momentum as a core signal, deliberately switch to a family without momentum as the primary driver in the next iteration.
+    - Do not treat "regime-awareness" as inherently preferable — evaluate each new hypothesis on its own merits, not on whether it resembles previously successful designs.
 
 factor_experiment_output_format: |-
   The output should follow JSON format. The schema is as follows:

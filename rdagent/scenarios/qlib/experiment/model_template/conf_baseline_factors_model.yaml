@@ -1,12 +1,12 @@
 qlib_init:
-    provider_uri: "~/.qlib/qlib_data/us_data"
+    provider_uri: "/Users/yufei/wrds_project/staging/qlib_data"
     region: us
-market: &market nasdaq100
-benchmark: &benchmark ^NDX
+market: &market sp500
+benchmark: &benchmark P84398
 
 data_handler_config: &data_handler_config
     start_time: {{ train_start | default("2008-01-01", true) }}
-    end_time: {{ test_end | default("null", true) }}
+    end_time: {{ test_end | default("2023-12-31", true) }}
     instruments: *market
     data_loader:
         class: NestedDataLoader
@@ -28,7 +28,7 @@ data_handler_config: &data_handler_config
               fields_group: feature
               clip_outlier: true
               fit_start_time: {{ train_start | default("2008-01-01", true) }}
-              fit_end_time: {{ train_end | default("2014-12-31", true) }}
+              fit_end_time: {{ train_end | default("2017-12-31", true) }}
         - class: Fillna
           kwargs:
               fields_group: feature
@@ -47,8 +47,8 @@ port_analysis_config: &port_analysis_config
             topk: 20
             n_drop: 2
     backtest:
-        start_time: {{ test_start | default("2017-01-01", true) }}
-        end_time: {{ test_end | default("null", true) }}
+        start_time: {{ test_start | default("2020-01-01", true) }}
+        end_time: {{ test_end | default("2023-12-31", true) }}
         account: 100000000
         benchmark: *benchmark
         exchange_kwargs:
@@ -69,7 +69,7 @@ task:
             weight_decay: {{ weight_decay }}
             metric: loss
             loss: mse
-            n_jobs: 20
+            n_jobs: 0
             GPU: 0
             pt_model_uri: "model.model_cls"
             pt_model_kwargs: {
@@ -85,9 +85,9 @@ task:
                 module_path: qlib.contrib.data.handler
                 kwargs: *data_handler_config
             segments:
-                train: [{{ train_start | default("2008-01-01", true) }}, {{ train_end | default("2014-12-31", true) }}]
-                valid: [{{ valid_start | default("2015-01-01", true) }}, {{ valid_end | default("2016-12-31", true) }}]
-                test: [{{ test_start | default("2017-01-01", true) }}, {{ test_end | default("null", true) }}]
+                train: [{{ train_start | default("2008-01-01", true) }}, {{ train_end | default("2017-12-31", true) }}]
+                valid: [{{ valid_start | default("2018-01-01", true) }}, {{ valid_end | default("2019-12-31", true) }}]
+                test: [{{ test_start | default("2020-01-01", true) }}, {{ test_end | default("2023-12-31", true) }}]
             {% if step_len %}step_len: {{ step_len }}{% endif %}
     record: 
         - class: SignalRecord

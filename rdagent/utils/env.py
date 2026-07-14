@@ -856,6 +856,10 @@ class QlibCondaEnv(LocalEnv[QlibCondaConf]):
                     shell=True,
                 )
                 subprocess.check_call(
+                    f"conda run -n {self.conf.conda_env_name} pip install 'mlflow==3.9.0'",
+                    shell=True,
+                )
+                subprocess.check_call(
                     f"conda run -n {self.conf.conda_env_name} pip install catboost xgboost tables torch",
                     shell=True,
                 )

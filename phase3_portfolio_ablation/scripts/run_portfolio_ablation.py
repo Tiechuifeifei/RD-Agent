@@ -36,8 +36,8 @@ EXECUTOR_CONFIG: dict[str, Any] = {
 }
 
 BASELINE_EXPECTED = {
-    "annualized_return": -0.11130933664717044,
-    "max_drawdown": -0.809844659491796,
+    "annualized_return": -0.014376776737956601,
+    "max_drawdown": -0.2683045360791795,
 }
 BASELINE_TOLERANCE = 1e-4
 

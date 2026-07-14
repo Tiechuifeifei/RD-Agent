@@ -1,27 +1,35 @@
 import qlib
-
-qlib.init(provider_uri="~/.qlib/qlib_data/cn_data")
-
 from qlib.data import D
 
-instruments = D.instruments()
-fields = ["$open", "$close", "$high", "$low", "$volume", "$factor"]
-data = D.features(instruments, fields, freq="day").swaplevel().sort_index().loc["2008-12-29":].sort_index()
+QLIB_DATA = "/Users/yufei/wrds_project/staging/qlib_data"
+START_TIME = "2008-01-01"
+END_TIME = "2023-12-31"
+FIELDS = ["$open", "$close", "$high", "$low", "$volume", "$factor"]
 
-data.to_hdf("./daily_pv_all.h5", key="data")
 
+def main() -> None:
+    qlib.init(provider_uri=QLIB_DATA, region="us")
+    instruments = D.instruments("sp500")
 
-fields = ["$open", "$close", "$high", "$low", "$volume", "$factor"]
-data = (
-    (
-        D.features(instruments, fields, start_time="2018-01-01", end_time="2019-12-31", freq="day")
+    data = (
+        D.features(instruments, FIELDS, start_time=START_TIME, end_time=END_TIME, freq="day")
         .swaplevel()
         .sort_index()
     )
-    .swaplevel()
-    .loc[data.reset_index()["instrument"].unique()[:100]]
-    .swaplevel()
-    .sort_index()
-)
+    data.to_hdf("./daily_pv_all.h5", key="data")
 
-data.to_hdf("./daily_pv_debug.h5", key="data")
+    debug = D.features(
+        instruments,
+        FIELDS,
+        start_time="2018-01-01",
+        end_time="2019-12-31",
+        freq="day",
+    ).swaplevel().sort_index()
+
+    top_instruments = debug.index.get_level_values("instrument").unique()[:100]
+    debug = debug.loc[(slice(None), top_instruments), :].sort_index()
+    debug.to_hdf("./daily_pv_debug.h5", key="data")
+
+
+if __name__ == "__main__":
+    main()
