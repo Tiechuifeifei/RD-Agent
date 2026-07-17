@@ -1,6 +1,7 @@
 import json
 from typing import List, Tuple
 
+from rdagent.app.qlib_rd_loop.conf import FactorBasePropSetting
 from rdagent.components.coder.factor_coder.factor import FactorExperiment, FactorTask
 from rdagent.components.proposal import FactorHypothesis2Experiment, FactorHypothesisGen
 from rdagent.core.proposal import Hypothesis, Scenario, Trace
@@ -10,6 +11,15 @@ from rdagent.scenarios.qlib.experiment.quant_experiment import QlibQuantScenario
 from rdagent.utils.agent.tpl import T
 
 QlibFactorHypothesis = Hypothesis
+
+
+def _successful_factor_experiments(trace: Trace) -> List[FactorExperiment]:
+    """Prior loops that completed backtest (result present), regardless of SOTA decision."""
+    return [
+        t[0]
+        for t in trace.hist
+        if isinstance(t[0], FactorExperiment) and t[0].result is not None and len(t[0].sub_tasks) > 0
+    ]
 
 
 class QlibFactorHypothesisGen(FactorHypothesisGen):
@@ -109,14 +119,24 @@ class QlibFactorHypothesis2Experiment(FactorHypothesis2Experiment):
             )
 
         exp = QlibFactorExperiment(tasks, hypothesis=hypothesis)
-        exp.based_experiments = [QlibFactorExperiment(sub_tasks=[])] + [
-            t[0] for t in trace.hist if t[1] and isinstance(t[0], FactorExperiment)
-        ]
+        empty_baseline = QlibFactorExperiment(sub_tasks=[])
+        accepted = [t[0] for t in trace.hist if t[1] and isinstance(t[0], FactorExperiment)]
+        exp.based_experiments = [empty_baseline] + accepted
+
+        fbps = FactorBasePropSetting()
+        if fbps.accumulate_all:
+            exp.factor_library_experiments = [empty_baseline] + _successful_factor_experiments(trace)
+        else:
+            exp.factor_library_experiments = None
+
+        dedupe_experiments = (
+            exp.factor_library_experiments if exp.factor_library_experiments is not None else exp.based_experiments
+        )
 
         unique_tasks = []
         for task in tasks:
             duplicate = False
-            for based_exp in exp.based_experiments:
+            for based_exp in dedupe_experiments:
                 if isinstance(based_exp, QlibModelExperiment):
                     continue
                 for sub_task in based_exp.sub_tasks:

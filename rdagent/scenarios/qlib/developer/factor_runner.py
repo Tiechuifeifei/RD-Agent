@@ -78,6 +78,9 @@ class QlibFactorRunner(CachedRunner[QlibFactorExperiment]):
             "valid_start": fbps.valid_start,
             "valid_end": fbps.valid_end,
             "test_start": fbps.test_start,
+            "market": fbps.market,
+            "topk": str(fbps.topk),
+            "n_drop": str(fbps.n_drop),
             "feature_names": str(list(exp.base_features.keys())),
             "feature_expressions": str(list(exp.base_features.values())),
         }
@@ -86,9 +89,14 @@ class QlibFactorRunner(CachedRunner[QlibFactorExperiment]):
 
         if exp.based_experiments:
             SOTA_factor = None
+            merge_sources = getattr(exp, "factor_library_experiments", None) or exp.based_experiments
+            if merge_sources is not exp.based_experiments:
+                logger.info(
+                    f"Accumulate-all mode: merging factors from {max(0, len(merge_sources) - 1)} prior successful loop(s)"
+                )
             # Filter and retain only QlibFactorExperiment instances
             sota_factor_experiments_list = [
-                base_exp for base_exp in exp.based_experiments if isinstance(base_exp, QlibFactorExperiment)
+                base_exp for base_exp in merge_sources if isinstance(base_exp, QlibFactorExperiment)
             ]
             if len(sota_factor_experiments_list) > 1:
                 logger.info(f"SOTA factor processing ...")

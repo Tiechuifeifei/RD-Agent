@@ -92,6 +92,23 @@ class FactorBasePropSetting(BasePropSetting):
     test_end: Optional[str] = "2023-12-31"
     """End date of the test / backtest segment"""
 
+    market: str = "sp500"
+    """Qlib instruments market name (e.g. sp500, sp500_tech, sp500_bank)"""
+
+    topk: int = 20
+    """TopkDropoutStrategy portfolio width (match universe size for Mag7: 7)"""
+
+    n_drop: int = 2
+    """TopkDropoutStrategy names replaced per rebalance day (same as main experiment)"""
+
+    accumulate_all: bool = False
+    """
+    When True, merge factors from every successfully executed prior loop into the
+    factor library (not only loops with decision=True / ARR beat SOTA).
+    Intended for small-universe sector reruns (e.g. bank Exp4); default False keeps
+    main RQ1 behaviour unchanged.
+    """
+
 
 class FactorFromReportPropSetting(FactorBasePropSetting):
     # 1) override the scen attribute
